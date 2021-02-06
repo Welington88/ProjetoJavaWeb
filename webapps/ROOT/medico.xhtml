@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" >
+<ui:composition template="/_template.xhtml" >
+	<ui:define name="corpo">
+	<h:form id="cadastro">
+	<p:messages styleClass="erros"/>
+	<h2>
+ 	<h:outputText value="Novo Médico" rendered="#{empty medicoBean.medico.crm}"/>
+ 	<h:outputText value="Editar Médico" rendered="#{not empty medicoBean.medico.crm}"/>
+ 	</h2>
+ 	<p:fieldset legend="Dados do Médico">
+		<p:outputLabel value="CRM:" for="crm" />
+		<p:inputText id="crm" value="#{medicoBean.medico.crm}" />
+		<p:outputLabel value="Nome:" for="nome" />
+		<p:inputText id="nome" value="#{medicoBean.medico.nome}" />
+		<p:outputLabel value="Telefone:" for="tel" />
+		<p:inputMask id="tel" value="#{medicoBean.medico.telefone}" mask="(99)9999-9999"/>
+		<p:outputLabel value="Especialidade:" for="area" />
+		<p:inputTextarea id="area" value="#{medicoBean.medico.area}" />
+		<p:outputLabel value="Salário:" for="salario" />
+		<p:inputText id="salario" value="#{medicoBean.medico.salario}" 
+			requiredMessage="Salário Mínimo" validatorMessage="O Salário Mínimo é R$5.000,00 ">
+			<f:convertNumber type="currency" currencySymbol="R$" locale="pt_BR" />
+			<f:validateDoubleRange minimum="5000.00"/>
+		</p:inputText>
+		<h:commandButton value="Gravar" action="#{medicoBean.grava}">
+			<f:ajax execute="@form" render=":lista :cadastro"/>
+		</h:commandButton>
+		<h:commandButton value="Cancelar" action="#{medicoBean.cancela}" 
+			rendered="#{not empty medicoBean.medico.crm}" >
+			<f:ajax render="@form"></f:ajax>
+		</h:commandButton>
+		</p:fieldset>
+	</h:form>
+  <h:form id="lista">
+  <h2>Listagem de Médicos</h2>
+  <p:dataTable value="#{medicoBean.medicos}" var="medico" 
+  	styleClass="dados" rowClasses="impar,par" paginator="true" rows="4">
+  <p:column headerText="Nome">
+  	#{medico.nome}
+  </p:column>
+   <p:column headerText="CRM">
+		#{medico.crm}
+	</p:column>
+	<p:column headerText="Telefone">
+		#{medico.telefone}
+	</p:column>
+	<p:column headerText="Especialiadade">
+		#{medico.area}
+	</p:column>
+ 	<p:column headerText="Salário" > 
+    <p:inputText value="#{medico.salario}">
+    	<f:convertNumber type="currency" currencySymbol="R$ " locale="pt_BR" />
+    </p:inputText>
+	 </p:column>
+	 <p:column headerText="Ações">
+	 <h:commandLink value=" Alterar " styleClass="btn" >
+	 	<f:setPropertyActionListener value="#{medico}" target="#{medicoBean.medico}"/>
+	 	<f:ajax execute="@form" render=":lista :cadastro"/>
+ 	</h:commandLink>
+	 <h:commandLink action="#{medicoBean.remove(medico)}" value=" Remover " styleClass="btn btn-danger" >
+	 	<f:ajax render="@form"></f:ajax>
+ 	</h:commandLink>
+	 </p:column>
+ </p:dataTable>
+ </h:form>
+</ui:define>
+</ui:composition>
+</html>
