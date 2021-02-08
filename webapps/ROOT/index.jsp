@@ -84,7 +84,7 @@
 
                         <div class="row">
 
-                            <h2>Hey, Java developers!</h2>
+                            <h2>Ei, desenvolvedores Java!</h2>
 
                         </div>
 
@@ -92,13 +92,13 @@
 
                         <div class="row">
 
-                            <h4>Your app service is up and running.</h4>
+                            <h4>Seu serviço de aplicativo está instalado e funcionando.</h4>
 
                         </div>
 
                         <div class="row">
 
-                            <h4>Time to take the next step and deploy your code.</h4>
+                            <h4>Hora de dar o próximo passo e implantar seu código.</h4>
 
                         </div>
 
@@ -106,13 +106,13 @@
 
                             <p class=" pl-0 col-md-6 col-sm-12 info-mg-top">
 
-                                Have your code ready?<br>
+                                Tem seu código pronto?<br>
 
-                                    Use deployment center to get code published from your client or setup continuous deployment.<br>
+                                Use o centro de implantação para publicar código do seu cliente ou configurar a implantação contínua.<br>
 
                                         <a id='depCenterLink' href="UPA-WelingtonMarqueziniValverdedaSilva/login.xhtml">
 
-                                            <button class="btn btn-primary btn-mg-top" type="submit">Acesso ao Projeto</button>
+                                            <h3>Acesso ao Projeto</h3>
 
                                         </a>
 
@@ -120,9 +120,9 @@
 
                             <p class="pl-0 offset-md-1 col-md-5 col-sm-12 info-mg-top">
 
-                                Don't have your code yet?<br>
+                                Ainda não tem seu código?<br>
 
-                                    Follow our quickstart guide and you'll have a full app ready in 5 minutes or less.<br>
+                                Siga nosso guia de início rápido e você terá um aplicativo completo pronto em 5 minutos ou menos.<br>
 
                                         <button onclick="location.href='http://aka.ms/java-quickstart-windows'" class="btn btn-primary btn-mg-top" type="submit">Quickstart</button>
 
@@ -156,7 +156,7 @@
 
                         <div class="row">
 
-                            <b>Technical Information</b>
+                            <b>Informações Técnicas</b>
 
                         </div>
 
