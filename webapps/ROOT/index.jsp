@@ -84,7 +84,7 @@
 
                         <div class="row">
 
-                            <h2>Hey, Java developers!</h2>
+                            <h2>Projeto Java Web Azure</h2>
 
                         </div>
 
@@ -95,10 +95,8 @@
                             <p class=" pl-0 col-md-6 col-sm-12 info-mg-top">
 
                                         <a id='depCenterLink' href="UPA-WelingtonMarqueziniValverdedaSilva/login.xhtml">
-                                            <h4>Projeto Java Web</h4>
+                                            <h4>Acesso Aqui!!!</h4>
                                         </a>
-                                        <button class="btn btn-primary btn-mg-top" type="submit">Acesso ao Projeto</button>
-
                             </p>
 
                         </div>
