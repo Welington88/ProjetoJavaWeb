@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
     <head>
 
@@ -16,7 +16,7 @@
                     <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
 
                     <link rel="stylesheet" type="text/css" href="https://appservice.azureedge.net/css/linux-landing-page/v3/main.css">
-                    
+
                     <style>
 
                         #container {
@@ -64,6 +64,7 @@
             </a>
 
         </nav>
+
         <div class="container-fluid container-height mr-2">
 
             <div class="pt-10 pb-10 mt-10 mb-10 d-xxs-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block" style="height:20px; width:100%; clear:both;"></div>
@@ -84,19 +85,48 @@
 
                         <div class="row">
 
-                            <h2>Projeto Java Web Azure</h2>
+                            <h2>Hey, Java developers!</h2>
 
                         </div>
 
-                        <br/>
+                        <br>
+
+                        <div class="row">
+
+                            <h4>Your app service is up and running.</h4>
+
+                        </div>
+
+                        <div class="row">
+
+                            <h4>Time to take the next step and deploy your code.</h4>
+
+                        </div>
 
                         <div class="row info-mg-top">
 
                             <p class=" pl-0 col-md-6 col-sm-12 info-mg-top">
 
-                                        <a id='depCenterLink' href="login.xhtml">
-                                            <h4>Acesso Aqui!!!</h4>
+                                Have your code ready?<br>
+
+                                    Use deployment center to get code published from your client or setup continuous deployment.<br>
+
+                                        <a id='depCenterLink' href="https://go.microsoft.com/fwlink/?linkid=2057852">
+
+                                            <button class="btn btn-primary btn-mg-top" type="submit">Deployment Center</button>
+
                                         </a>
+
+                            </p>
+
+                            <p class="pl-0 offset-md-1 col-md-5 col-sm-12 info-mg-top">
+
+                                Don't have your code yet?<br>
+
+                                    Follow our quickstart guide and you'll have a full app ready in 5 minutes or less.<br>
+
+                                        <button onclick="location.href='http://aka.ms/java-quickstart-windows'" class="btn btn-primary btn-mg-top" type="submit">Quickstart</button>
+
                             </p>
 
                         </div>
