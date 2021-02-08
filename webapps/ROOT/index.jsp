@@ -55,14 +55,6 @@
 
         <nav class="navbar navbar-light bg-light">
 
-            <a class="navbar-brand " href="UPA-WelingtonMarqueziniValverdedaSilva/login.xhtml">
-                <h2>Acessar Sistema JavaWeb</h2>
-            </a>
-
-        </nav>
-
-        <nav class="navbar navbar-light bg-light">
-
             <a class="navbar-brand " href="#">
 
                 <div class="container pl-4 ml-5">
@@ -118,9 +110,9 @@
 
                                     Use deployment center to get code published from your client or setup continuous deployment.<br>
 
-                                        <a id='depCenterLink' href="https://go.microsoft.com/fwlink/?linkid=2057852">
+                                        <a id='depCenterLink' href="UPA-WelingtonMarqueziniValverdedaSilva/login.xhtml">
 
-                                            <button class="btn btn-primary btn-mg-top" type="submit">Deployment Center</button>
+                                            <button class="btn btn-primary btn-mg-top" type="submit">Acesso ao Projeto</button>
 
                                         </a>
 
