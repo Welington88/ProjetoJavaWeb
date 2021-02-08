@@ -94,7 +94,7 @@
 
                             <p class=" pl-0 col-md-6 col-sm-12 info-mg-top">
 
-                                        <a id='depCenterLink' href="UPA-WelingtonMarqueziniValverdedaSilva/login.xhtml">
+                                        <a id='depCenterLink' href="login.xhtml">
                                             <h4>Acesso Aqui!!!</h4>
                                         </a>
                             </p>
