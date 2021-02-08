@@ -9,7 +9,7 @@
 
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-                    <title>Microsoft Azure App Service - Welcome</title>
+                    <title>Microsoft Azure/title>
 
                     <link rel="SHORTCUT ICON" href="https://c.s-microsoft.com/favicon.ico?v2" type="image/x-icon"/>
 
@@ -90,25 +90,10 @@
 
                         <br>
 
-                        <div class="row">
-
-                            <h4>Seu serviço de aplicativo está instalado e funcionando.</h4>
-
-                        </div>
-
-                        <div class="row">
-
-                            <h4>Hora de dar o próximo passo e implantar seu código.</h4>
-
-                        </div>
 
                         <div class="row info-mg-top">
 
                             <p class=" pl-0 col-md-6 col-sm-12 info-mg-top">
-
-                                Tem seu código pronto?<br>
-
-                                Use o centro de implantação para publicar código do seu cliente ou configurar a implantação contínua.<br>
 
                                         <a id='depCenterLink' href="UPA-WelingtonMarqueziniValverdedaSilva/login.xhtml">
 
@@ -117,17 +102,6 @@
                                         </a>
 
                             </p>
-
-                            <p class="pl-0 offset-md-1 col-md-5 col-sm-12 info-mg-top">
-
-                                Ainda não tem seu código?<br>
-
-                                Siga nosso guia de início rápido e você terá um aplicativo completo pronto em 5 minutos ou menos.<br>
-
-                                        <button onclick="location.href='http://aka.ms/java-quickstart-windows'" class="btn btn-primary btn-mg-top" type="submit">Quickstart</button>
-
-                            </p>
-
                         </div>
 
                     </div>
@@ -156,7 +130,7 @@
 
                         <div class="row">
 
-                            <b>Informações Técnicas</b>
+                            <b>Basic Inf.</b>
 
                         </div>
 
