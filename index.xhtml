@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtm11/DTD/xhtm11-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<ui:composition template="/_template.xhtml" >
+	<ui:define name="corpo">
+        <h:form>
+            <h:inputText />
+            <h:commandButton value="Clique-me" />
+        </h:form>
+        <br />
+        <h:link outcome="/medico/List" value="Show All Medico Items"/>
+    </ui:define>
+</ui:composition>
+</html>

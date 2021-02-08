@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" >
+<ui:composition template="/_template.xhtml" >
+	<ui:define name="corpo">
+	<!-- O conteudo vai aqui -->  
+	<!-- Inicio Cadastro do Paciente -->
+ <h:form id="cadastro">
+ <p:messages styleClass="erros"/>
+	<h2>
+ 	<h:outputText value="Cadastro Paciente" rendered="#{empty pacienteBean.paciente.cpf}"/>
+ 	<h:outputText value="Editar Paciente" rendered="#{not empty pacienteBean.paciente.cpf}"/>
+ 	</h2>
+ 	<p:fieldset legend="Dados do Paciente">
+		<p:outputLabel value="CPF:" for="cpf"/>
+		<p:inputMask id="cpf" value="#{pacienteBean.paciente.cpf}" mask="999.999.999-99"/>
+		<p:outputLabel value="Nome:" for="nome" />
+		<p:inputText id="nome" value="#{pacienteBean.paciente.nome}" />
+		<p:outputLabel value="Telefone:" for="tel" />
+		<p:inputMask id="tel" value="#{pacienteBean.paciente.telefone}" mask="(99)9999-9999"/>
+		<p:outputLabel value="Sexo:" for="sexo" />
+		<p:inputText id="sexo"  value="#{pacienteBean.paciente.sexo}" />
+		<p:outputLabel value="Nasc:" for="nasc" />
+		<p:calendar id="nasc" value="#{pacienteBean.paciente.dataNasc.time}" pattern="dd/MM/yyyy" />
+		<h:commandButton value="Gravar" action="#{pacienteBean.grava}">
+			<f:ajax execute="@form" render=":cadastro :lista"/>
+		</h:commandButton>
+		<h:commandButton value="Cancelar" action="#{pacienteBean.cancela}" 
+			rendered="#{not empty pacienteBean.paciente.cpf}" >
+			<f:ajax render="@form"></f:ajax>
+		</h:commandButton>
+	</p:fieldset>
+	</h:form>
+ <!-- Fim Cadastro do Paciente -->
+  <h:form id="lista">
+  <p:messages styleClass="erros"/>
+  <h2>Listagem de Pacientes</h2>
+  <p:dataTable value="#{pacienteBean.pacientes}" var="paciente" 
+  	styleClass="dados" rowClasses="impar,par" paginator="true" rows="4" >
+  <p:column headerText="Nome">
+  	#{paciente.nome}
+  </p:column>
+   <p:column headerText="CPF">
+	#{paciente.cpf}
+	</p:column>
+	<p:column headerText="Telefone">
+			#{paciente.telefone}
+	</p:column>
+	<p:column headerText="Sexo">
+		#{paciente.sexo}
+	</p:column>
+	<p:column headerText="Data de Nascimento"> 
+			<p:inputText value="#{paciente.dataNasc.time}">
+				<f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+			</p:inputText> 
+	</p:column>
+	 <p:column headerText="Ações">
+	 <h:commandLink value=" Alterar " styleClass="btn" >
+	 	<f:setPropertyActionListener value="#{paciente}" target="#{pacienteBean.paciente}"/>
+	 	<f:ajax execute="@form" render=":lista :cadastro"/>
+ 	</h:commandLink>
+	 <h:commandLink action="#{pacienteBean.remove(paciente)}" value=" Remover " styleClass="btn btn-danger" >
+	 	<f:ajax render="@form"></f:ajax>
+ 	</h:commandLink>
+	 </p:column>
+ </p:dataTable>
+ </h:form>
+</ui:define>
+</ui:composition>
+</html>
