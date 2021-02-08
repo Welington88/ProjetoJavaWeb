@@ -9,7 +9,7 @@
 
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-                    <title>Microsoft Azure/title>
+                    <title>Microsoft Azure App Service - Welcome</title>
 
                     <link rel="SHORTCUT ICON" href="https://c.s-microsoft.com/favicon.ico?v2" type="image/x-icon"/>
 
@@ -84,24 +84,49 @@
 
                         <div class="row">
 
-                            <h2>Ei, desenvolvedores Java!</h2>
+                            <h2>Hey, Java developers!</h2>
 
                         </div>
 
                         <br>
 
+                        <div class="row">
+
+                            <h4>Your app service is up and running.</h4>
+
+                        </div>
+
+                        <div class="row">
+
+                            <h4>Time to take the next step and deploy your code.</h4>
+
+                        </div>
 
                         <div class="row info-mg-top">
 
                             <p class=" pl-0 col-md-6 col-sm-12 info-mg-top">
 
+                                Have your code ready?<br>
+
+                                    Use deployment center to get code published from your client or setup continuous deployment.<br>
+
                                         <a id='depCenterLink' href="UPA-WelingtonMarqueziniValverdedaSilva/login.xhtml">
-
-                                            <h3>Acesso ao Projeto</h3>
-
+                                            <h4>Click aqui</h4>
                                         </a>
+                                        <button class="btn btn-primary btn-mg-top" type="submit">Acesso ao Projeto</button>
 
                             </p>
+
+                            <p class="pl-0 offset-md-1 col-md-5 col-sm-12 info-mg-top">
+
+                                Don't have your code yet?<br>
+
+                                    Follow our quickstart guide and you'll have a full app ready in 5 minutes or less.<br>
+
+                                        <button onclick="location.href='http://aka.ms/java-quickstart-windows'" class="btn btn-primary btn-mg-top" type="submit">Quickstart</button>
+
+                            </p>
+
                         </div>
 
                     </div>
@@ -130,7 +155,7 @@
 
                         <div class="row">
 
-                            <b>Basic Inf.</b>
+                            <b>Technical Information</b>
 
                         </div>
 
